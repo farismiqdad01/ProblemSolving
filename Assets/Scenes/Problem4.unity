@@ -556,9 +556,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1868461422}
   - component: {fileID: 1868461421}
-  - component: {fileID: 1868461424}
   - component: {fileID: 1868461423}
   - component: {fileID: 1868461425}
+  - component: {fileID: 1868461424}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868461420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c098644d7544f64aa63ff023a56a079, type: 3}
+  m_Script: {fileID: 11500000, guid: a43ef1b5bca115b45813fc671288c637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!58 &1868461425
