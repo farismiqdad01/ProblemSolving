@@ -16,10 +16,9 @@ public class PlayerController : MonoBehaviour
     private float x;
     private float y;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-
+        Time.timeScale = 1;
     }
 
     private void Update()
