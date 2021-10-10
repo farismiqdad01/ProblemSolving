@@ -7,10 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private float speed = 5;
+    [SerializeField]
+    private GameObject panel;
     private float minX = -9, maxX = 9, minY = -5, maxY = 5;
     private Vector2 mosPos;
     public Text scoreText;
     private int score;
+    private float x;
+    private float y;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +27,10 @@ public class PlayerController : MonoBehaviour
         mosPos = Input.mousePosition;
         mosPos = Camera.main.ScreenToWorldPoint(mosPos);
         scoreText.text = "Score : " + score.ToString();
+        if(gameObject.transform.localScale.x<0.1 && gameObject.transform.localScale.y < 0.1)
+        {
+            gameover();
+        }
     }
     void FixedUpdate()
     {
@@ -42,7 +50,21 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "kotak")
         {
             score++;
+            x+=0.1f;
+            y+=0.1f;
         }
+        else
+        {
+            x -= 0.1f;
+            y -= 0.1f;
+        }
+        gameObject.transform.localScale = new Vector3(x, y, 0);
+    }
+
+    void gameover()
+    {
+        panel.SetActive(true);
+        Time.timeScale = 0;
     }
 
 }
