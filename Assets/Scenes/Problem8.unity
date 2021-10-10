@@ -680,6 +680,7 @@ MonoBehaviour:
   maxY: 3.8
   kotakPrefabs: {fileID: 9031900477487821797, guid: a91639ef501673b46b37a20edf8d4fb6,
     type: 3}
+  enemy: {fileID: 0}
 --- !u!4 &1117420540
 Transform:
   m_ObjectHideFlags: 0
